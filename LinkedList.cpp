@@ -34,7 +34,7 @@ void LinkedList::insertNode(Sales dataIn)
     Node *pPre = head;
     Node *pCur = head->next;
 
-    while (pCur != NULL && pCur->data.getName() < dataIn.getName())
+    while (pCur != NULL && pCur->data < dataIn)
     {
         pCur = pCur->next;
         pPre = pPre->next;

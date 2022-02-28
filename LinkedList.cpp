@@ -115,13 +115,21 @@ void LinkedList::displayList(int year) const
 
 
 /**********************************************
-  
-  
-  
+  The purpose of this function is to calculate 
+  and return the amount sold average.  
 **********************************************/
 double LinkedList::average() const
 {
-    /* Write your code here */
+    int sum {0};
+    Node *pCur = head->next;
+
+    while (pCur)
+    {
+        sum += pCur->data.getAmountSold();
+        pCur = pCur->next;
+    }
+    
+    return static_cast<double>(sum) / length;
 }
 
 /**********************************************

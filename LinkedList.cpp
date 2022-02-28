@@ -23,15 +23,26 @@ LinkedList::LinkedList()
     length = 0;
 }
 
-int LinkedList::getLength() const {return length;}
-
 /**********************************************
  The insertNode function inserts a new node in a
  sorted linked list
-*/
+**********************************************/
 void LinkedList::insertNode(Sales dataIn)
 {
- /* Write your code here */
+    Node *pNew = new Node;
+    pNew->data = dataIn;
+    Node *pPre = head;
+    Node *pCur = head->next;
+
+    while (pCur != NULL && pCur->data.getName() < dataIn.getName())
+    {
+        pCur = pCur->next;
+        pPre = pPre->next;
+    }
+    pPre->next = pNew;
+    pNew->next = pCur;
+
+    length++;
 }
 
 /**********************************************

@@ -88,13 +88,29 @@ void LinkedList::displayList() const
 }
 
 /**********************************************
-  
-  
-  
+The purpose of this function is to display the salespeople 
+hired in the given year. 
+If no one has been hired in the given year display "N/A":  
 **********************************************/
 void LinkedList::displayList(int year) const
 {
-    /* Write your code here */
+    Node *pCur = head->next;
+    int counter {0};
+
+    cout << "==== ==================== =============" << endl;
+    cout << "Year Name                 Amount Earned" << endl;
+    cout << "==== ==================== =============" << endl;
+    
+    while (pCur) {
+        if (pCur->data.getYear() == year) {
+            cout << pCur->data;
+            counter++;
+        }
+    }
+    if (!counter)
+        cout << "N/A" << endl;
+    
+    cout << "==== ==================== =============" << endl;
 }
 
 

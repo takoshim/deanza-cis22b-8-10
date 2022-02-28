@@ -28,7 +28,7 @@ public:
     void insertNode(Sales);
     bool deleteNode(string);
     void displayList() const;
-    bool searchList( /* Write your code here */)const;
+    void searchList()const;
     
     // Other functions
    void displayList(int) const;

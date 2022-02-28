@@ -129,12 +129,30 @@ double LinkedList::average() const
  in the sorted linked list: if found, returns true
  and copies the data in that node to the output parameter
 **********************************************/
-bool LinkedList::searchList( /* Write your code here */) const
+void LinkedList::searchList() const
 {
-   bool found = false;
-   /* Write your code here */
-   
-    return found;
+    bool found = false;
+    string target;
+
+    while (target != "Q")
+    {
+        cout << "Enter a name (or Q to stop searching) : " << endl;
+        getline(cin, target);
+
+        Node *pCur = head->next;
+        bool found {false};
+
+        while (pCur && !found)
+        {
+            if (pCur->data == target){
+                pCur->data.display();
+                found = true;
+            }
+            pCur = pCur->next;
+        }
+        if (!found)
+            cout << target << " not found!" << endl;
+    }
 }
 
 /**********************************************

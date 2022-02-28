@@ -8,14 +8,14 @@
 
 using namespace std;
 
-/*
+/*********************************************
  Constructor
  This function allocates and initializes a sentinel node
       A sentinel (or dummy) node is an extra node added before the first data record.
       This convention simplifies and accelerates some list-manipulation algorithms,
       by making sure that all links can be safely dereferenced and that every list
       (even one that contains no data elements) always has a "first" node.
-*/ 
+**********************************************/ 
 LinkedList::LinkedList()
 {
     head = new Node; // head points to the sentinel node
@@ -23,7 +23,9 @@ LinkedList::LinkedList()
     length = 0;
 }
 
-/*
+int LinkedList::getLength() const {return length;}
+
+/**********************************************
  The insertNode function inserts a new node in a
  sorted linked list
 */
@@ -32,52 +34,52 @@ void LinkedList::insertNode(Sales dataIn)
  /* Write your code here */
 }
 
-/*
+/**********************************************
  The deleteNode function searches for a node
  in a sorted linked list; if found, the node is
  deleted from the list and from memory.
-*/
+**********************************************/
 bool LinkedList::deleteNode(string target)
 {
   /* Write your code here */
 }
 
-/*
+/**********************************************
  displayList shows the value
  stored in each node of the linked list
  pointed to by head, except the sentinel node
-*/
+**********************************************/
 void LinkedList::displayList() const
 {
  /* Write your code here */
 }
 
-/*
+/**********************************************
   
   
   
-*/
+**********************************************/
 void LinkedList::displayList(int year) const
 {
     /* Write your code here */
 }
 
 
-/*
+/**********************************************
   
   
   
-*/
+**********************************************/
 double LinkedList::average() const
 {
     /* Write your code here */
 }
 
-/*
+/**********************************************
  The searchList function looks for a target item
  in the sorted linked list: if found, returns true
  and copies the data in that node to the output parameter
-*/
+**********************************************/
 bool LinkedList::searchList( /* Write your code here */) const
 {
    bool found = false;
@@ -86,10 +88,10 @@ bool LinkedList::searchList( /* Write your code here */) const
     return found;
 }
 
-/*
+/**********************************************
  Destructor
  This function deletes every node in the list.
-*/
+**********************************************/
 LinkedList::~LinkedList()
 {
     Node *pCur;     // To traverse the list

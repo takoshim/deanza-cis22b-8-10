@@ -40,10 +40,10 @@ int main()
     return 0;
 }
 
-/* 
+/********************************************** 
  This function reads data from a file and inserts them
  into a sorted linked list. The list is sorted in ascending order by name
- */
+ **********************************************/
 void buildList(const string &filename, LinkedList &list)
 {
     ifstream inFile(filename);
@@ -79,11 +79,11 @@ void buildList(const string &filename, LinkedList &list)
     inFile.close();
 }
 
-/* 
+/********************************************** 
  Delete manager: delete items from the list until the user enters Q to quit
  deleting
  Input Parameter: list
- */
+ **********************************************/
 void deleteManager(LinkedList &list)
 {
     string target = "";
@@ -107,10 +107,10 @@ void deleteManager(LinkedList &list)
     cout << "___________________END DELETE SECTION_____" << endl;
 }
 
-/* 
+/* *********************************************
  Search manager: search the list until the user enters Q to quit searching
  Input Parameter: list
- */
+ **********************************************/
 void searchManager(const LinkedList &list)
 {
     string target = "";
@@ -123,12 +123,12 @@ void searchManager(const LinkedList &list)
     cout << "___________________END SEARCH SECTION _____" << endl;
 }
 
-/*
+/**********************************************
 Display manager: all, average, or year hired reports including header and footer where appropriate,
  depending on the user's choice;
  displays the number of nodes (always)
 Input Parameter: list
-*/
+**********************************************/
 void displayManager(const LinkedList &list)
 {
     // Sub-functions of displayManager()
@@ -170,10 +170,10 @@ void displayManager(const LinkedList &list)
     cout << "Number of salespeople: " << list.getLength() << endl;
 }
 
-/*
+/**********************************************
 Displays the header of the list - used in displayManager()
 Input Parameter: line
-*/
+**********************************************/
 void showHeader(string line)
 {
     cout << line;
@@ -182,9 +182,9 @@ void showHeader(string line)
     cout << line;
 }
 
-/*
+/**********************************************
 Gets and returns the user's option - used in displayManager()
-*/
+**********************************************/
 string getOption(void)
 {    
     string option;
@@ -203,9 +203,9 @@ string getOption(void)
     return option;
 }
 
-/*
+/**********************************************
 Displays the menu - used in displayManager()
-*/
+**********************************************/
 void showMenu(void)
 {
     cout << "The following reports are available: " << endl;

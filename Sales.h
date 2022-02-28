@@ -36,10 +36,10 @@ public:
     void setAmountSold  (int    amountSold_val)  {amountSold = amountSold_val;};
     
     // getters
-    string  getId()     const {return id;};
-    int     getYear()   const {return year;};
-    string  getName()   const {return name;};
-    int     getAmount() const {return amountSold;};
+    string  getId()         const {return id;};
+    int     getYear()       const {return year;};
+    string  getName()       const {return name;};
+    int     getAmountSold() const {return amountSold;};
 
     // other functions
     void    display () const;
@@ -47,12 +47,12 @@ public:
     double  detAmountEarned (int amountSold) const;
 
     // overloaded operators
-    bool operator < (const Sales right) const;
-    bool operator == (const Sales right) const;
-    bool operator > (const Sales right) const;
-    bool operator >= (const Sales right) const;
-    bool operator <= (const Sales right) const;
-    bool operator != (const Sales right) const;
+    bool operator <   (const Sales right) const;
+    bool operator ==  (const Sales right) const;
+    bool operator >   (const Sales right) const;
+    bool operator >=  (const Sales right) const;
+    bool operator <=  (const Sales right) const;
+    bool operator !=  (const Sales right) const;
 
     // friends
     friend ostream &operator << (ostream &strm, Sales &obj); 

@@ -27,7 +27,7 @@ LinkedList::LinkedList()
  The insertNode function inserts a new node in a
  sorted linked list
 */
-void LinkedList::insertNode(Salest dataIn)
+void LinkedList::insertNode(Sales dataIn)
 {
  /* Write your code here */
 }

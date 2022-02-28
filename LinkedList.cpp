@@ -52,7 +52,24 @@ void LinkedList::insertNode(Sales dataIn)
 **********************************************/
 bool LinkedList::deleteNode(string target)
 {
-  /* Write your code here */
+    Node *pCur = head->next;       // To traverse the list
+    Node *pPre = head;        // To point to the previous node
+    bool deleted = false;
+
+    while (pCur != NULL && pCur->data != target)
+    {
+        pPre = pCur;
+        pCur = pCur->next;
+    }
+
+    if (pCur != NULL && pCur->data == target)
+    {
+        pPre->next = pCur->next;
+        delete pCur;
+        deleted = true;
+        length--;
+    }
+    return deleted;
 }
 
 /**********************************************

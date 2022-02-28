@@ -63,17 +63,17 @@ void buildList(const string &filename, LinkedList &list)
    string line;
    while (getline(inFile, line) )
    {
-      stringstream temp(line);
-      temp >> id >> year;
-      temp.ignore();
-      getline(temp, name, ';');
-      temp >> amount;
-        // create a Sales object and initialize it with data from file
-        /* Write your code here */
+        stringstream temp(line);
+        temp >> id >> year;
+        temp.ignore();
+        getline(temp, name, ';');
+        temp >> amount;
         
+        // create a Sales object and initialize it with data from file
+        Sales newData(id, year, name, amount);
         
         // call insert to insert this new Sales object into the sorted list
-        /* Write your code here */
+        list.insertNode(newData);
     }
 
     inFile.close();

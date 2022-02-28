@@ -79,7 +79,12 @@ bool LinkedList::deleteNode(string target)
 **********************************************/
 void LinkedList::displayList() const
 {
- /* Write your code here */
+    Node *pCur = head->next;
+    while (pCur) {
+        cout << pCur->data << endl;
+        pCur = pCur->next;
+    }
+    cout << endl;
 }
 
 /**********************************************

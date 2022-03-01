@@ -139,7 +139,6 @@ double LinkedList::average() const
 **********************************************/
 void LinkedList::searchList() const
 {
-    bool found = false;
     string target;
 
     while (target != "Q")

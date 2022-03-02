@@ -86,7 +86,7 @@ void buildList(const string &filename, LinkedList &list)
  **********************************************/
 void deleteManager(LinkedList &list)
 {
-    string target = "";
+    string target;
 
     cout << " Delete" << endl;
     cout << "========" << endl;
@@ -113,13 +113,25 @@ void deleteManager(LinkedList &list)
  **********************************************/
 void searchManager(const LinkedList &list)
 {
-    string target = "";
+    string target;
     Sales obj;
 
     cout << " Search" << endl;
     cout << "========" << endl;
 
-   /* Write your code here */
+        while(target != "Q")
+    {
+        cout << "Enter a name (or Q to stop searching):" << endl;
+        getline(cin, target);
+        target[0] = toupper(target[0]);
+        if(target != "Q")
+        {
+            if(list.searchList(obj, target))
+                obj.display();
+            else
+                cout << target << " not found!" << endl;
+        }
+    }
     cout << "___________________END SEARCH SECTION _____" << endl;
 }
 

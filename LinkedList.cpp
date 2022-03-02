@@ -84,7 +84,6 @@ void LinkedList::displayList() const
         cout << pCur->data << endl;
         pCur = pCur->next;
     }
-    cout << endl;
 }
 
 /**********************************************

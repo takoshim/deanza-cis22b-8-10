@@ -103,86 +103,74 @@ double Sales::detAmountEarned (int amountSold) const{
  Overloaded operator <
  ************************************************/
 bool Sales::operator < (const Sales right) const {
-    bool status = false;
-    if (this -> getName() < right.getName() )
-        status = true;
-    return status;
+    return name < right.name;
 }
 
 bool Sales::operator < (const string right) const {
-    bool status = false;
-    if (this -> getName() < right)
-        status = true;
-    return status;
+    return name < right;
 }
 
 /***********************************************
  Overloaded operator ==
  ************************************************/
 bool Sales::operator == (const Sales right) const {
-    bool status = false;
-    if (this -> getName() == right.getName() )
-        status = true;
-    return status;
+    return name == right.name;
 }
 
 bool Sales::operator == (const string right) const {
-    bool status = false;
-    if (this -> getName() == right)
-        status = true;
-    return status;
+    return name == right;
 }
 
 /************************************************
  Overloaded operator >
 ************************************************/
 bool Sales::operator > (const Sales right) const {
-    return right.getName() < this -> getName();
+    return name > right.name;
 }
 
 bool Sales::operator > (const string right) const {
-    return right < this -> getName();
+    return name > right;
 }
 
 /************************************************
  Overloaded operator >=
 ************************************************/
 bool Sales::operator >= (const Sales right) const {
-    return !(this -> getName() < right.getName());
+    return name >= right.name;
 }
 
 bool Sales::operator >= (const string right) const {
-    return !(this -> getName() < right);
+    return name >= right;
 }
 
 /************************************************
  Overloaded operator <=
 ************************************************/
 bool Sales::operator <= (const Sales right) const {
-    return !(this -> getName() > right.getName());
+    return name <= right.name;
 }
 
 bool Sales::operator <= (const string right) const {
-    return !(this -> getName() > right);
+    return name <= right;
 }
 
 /***********************************************
  Overloaded operator !=
  ************************************************/
 bool Sales::operator != (const Sales right) const {
-    return !(this -> getName() == right.getName());
+    return name != right.name;
 }
 
 bool Sales::operator != (const string right) const {
-    return !(this -> getName() == right);
+    return name != right;
 }
 
 /***********************************************
- Overloaded operator !=
+ Overloaded operator <<
  ************************************************/
 ostream &operator << (ostream &strm, Sales &obj) {
-    strm    << setw( 5) << left  << obj.getYear()
-            << setw(21) << left  << obj.getName()
+    strm    << setw( 5) << left  << obj.name
+            << setw(21) << left  << obj.name
             << setw( 9) << right << setprecision(2) << fixed << obj.detAmountEarned(obj.getAmountSold());
     return strm;
 } 

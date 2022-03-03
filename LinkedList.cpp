@@ -96,20 +96,15 @@ void LinkedList::displayList(int year) const
     Node *pCur = head->next;
     int counter {0};
 
-    cout << "==== ==================== =============" << endl;
-    cout << "Year Name                 Amount Earned" << endl;
-    cout << "==== ==================== =============" << endl;
-    
     while (pCur) {
         if (pCur->data.getYear() == year) {
-            cout << pCur->data;
+            cout << pCur->data << endl;
             counter++;
         }
+        pCur = pCur->next;
     }
     if (!counter)
         cout << "N/A" << endl;
-    
-    cout << "==== ==================== =============" << endl;
 }
 
 

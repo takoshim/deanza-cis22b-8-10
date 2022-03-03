@@ -143,7 +143,7 @@ bool LinkedList::searchList(Sales &obj, string target) const
 
     while (pCur && !found)
     {
-        if (pCur->data.getName() == target)
+        if (pCur->data == target)
         {
             found = true;
             obj = pCur->data; 

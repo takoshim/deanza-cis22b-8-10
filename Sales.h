@@ -48,11 +48,17 @@ public:
 
     // overloaded operators
     bool operator <   (const Sales right) const;
+    bool operator <   (const string right) const;   // arg is string
     bool operator ==  (const Sales right) const;
+    bool operator ==  (const string right) const;   // arg is string
     bool operator >   (const Sales right) const;
+    bool operator >   (const string right) const;   // arg is string
     bool operator >=  (const Sales right) const;
+    bool operator >=  (const string right) const;   // arg is string
     bool operator <=  (const Sales right) const;
+    bool operator <=  (const string right) const;   // arg is string
     bool operator !=  (const Sales right) const;
+    bool operator !=  (const string right) const;   // arg is string
 
     // friends
     friend ostream &operator << (ostream &strm, Sales &obj); 

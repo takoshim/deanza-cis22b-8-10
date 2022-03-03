@@ -109,12 +109,26 @@ bool Sales::operator < (const Sales right) const {
     return status;
 }
 
+bool Sales::operator < (const string right) const {
+    bool status = false;
+    if (this -> getName() < right)
+        status = true;
+    return status;
+}
+
 /***********************************************
  Overloaded operator ==
  ************************************************/
 bool Sales::operator == (const Sales right) const {
     bool status = false;
     if (this -> getName() == right.getName() )
+        status = true;
+    return status;
+}
+
+bool Sales::operator == (const string right) const {
+    bool status = false;
+    if (this -> getName() == right)
         status = true;
     return status;
 }
@@ -126,11 +140,19 @@ bool Sales::operator > (const Sales right) const {
     return right.getName() < this -> getName();
 }
 
+bool Sales::operator > (const string right) const {
+    return right < this -> getName();
+}
+
 /************************************************
  Overloaded operator >=
 ************************************************/
 bool Sales::operator >= (const Sales right) const {
     return !(this -> getName() < right.getName());
+}
+
+bool Sales::operator >= (const string right) const {
+    return !(this -> getName() < right);
 }
 
 /************************************************
@@ -140,11 +162,19 @@ bool Sales::operator <= (const Sales right) const {
     return !(this -> getName() > right.getName());
 }
 
+bool Sales::operator <= (const string right) const {
+    return !(this -> getName() > right);
+}
+
 /***********************************************
  Overloaded operator !=
  ************************************************/
 bool Sales::operator != (const Sales right) const {
     return !(this -> getName() == right.getName());
+}
+
+bool Sales::operator != (const string right) const {
+    return !(this -> getName() == right);
 }
 
 /***********************************************

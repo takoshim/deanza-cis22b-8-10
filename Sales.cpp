@@ -169,7 +169,7 @@ bool Sales::operator != (const string right) const {
  Overloaded operator <<
  ************************************************/
 ostream &operator << (ostream &strm, Sales &obj) {
-    strm    << setw( 5) << left  << obj.name
+    strm    << setw( 5) << left  << obj.year
             << setw(21) << left  << obj.name
             << setw( 9) << right << setprecision(2) << fixed << obj.detAmountEarned(obj.getAmountSold());
     return strm;

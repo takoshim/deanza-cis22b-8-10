@@ -76,16 +76,18 @@ void Sales::display() const{
 double Sales::detCommissionPercent (int amountSold) const {
 
     double commission = 0;    
-    if      (amountSold <= 0)
-        commission = 0;
-    else if (amountSold >= 1    && amountSold <= 1000)
-        commission = 3.0;
-    else if (amountSold >= 1001 && amountSold <= 5000)
-        commission = 4.5;
-    else if (amountSold >= 5001 && amountSold <= 10000)
+    if      (amountSold > 10000)
+        commission = 6.00;
+
+    else if (amountSold >  5000)
         commission = 5.25;
-    else if (amountSold >= 10001)
-        commission = 6;
+
+    else if (amountSold >  1000)
+        commission = 4.50;
+
+    else if (amountSold >=    0)
+        commission = 3.0;
+
     return commission; 
 }
 
